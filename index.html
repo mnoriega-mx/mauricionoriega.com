@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="background"></div>
+    <div id="background"></div>
     <div class="banner">
         <div class="navbar">
             <a href="#">About Me</a>
@@ -17,12 +17,21 @@
             <a href="#">Contact</a>
         </div>
     </div>
+    <div class="theme-banner">
+        <div class="theme-navbar">
+            <button id="golf">Golf Theme</button>
+            <button id="beach">Beach Theme</button>
+            <button id="business">Business Theme</button>
+        </div>
+    </div>
     <div class="img-container">
         <h1 class="name">Mauricio Noriega</h1>
-        <img src="MauBuzo.jpeg" height="576" width="432">
+        <img id="personal-img" src="MauBuzo.jpeg" height="576" width="432">
         <div class="glow-wrap">
             <i class="glow"></i>
         </div>
     </div>
+    
+    <script src="personal.js"></script>
 </body>
 </html>
