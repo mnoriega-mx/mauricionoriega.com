@@ -10,12 +10,13 @@ body,html {
 }
 
 #background {
-    background-image: url("Cacaluta.jpeg");
+    background-image: url("Professional.jpeg");
     opacity: 0.75;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     height: 100%;
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .banner {
@@ -67,6 +68,10 @@ button {
     font-weight: 900;
     color: white;
     font-size: 80px;
+    text-shadow: 2px 2px grey;
+    transform: translate(65%, 75%);
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    line-height: 1.2;
 }
 
 .navbar a{
@@ -76,6 +81,7 @@ button {
     color: white;
     text-decoration: none;
     text-transform: capitalize;
+    text-shadow: 2px 2px grey;
     transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
@@ -88,19 +94,13 @@ button {
     display: block;
 }
 
-img {
+#personal-img {
     object-fit: cover;
     border-radius: 50px;
     box-shadow: 10px 15px 25px 0 rgba(0,0,0,.4);
     display: block;
     transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
     margin-top: -10px;
-}
-
-h1 {
-    transform: translate(65%, 75%);
-    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
-    line-height: 1.2;
 }
 
 .img-container .glow-wrap{
