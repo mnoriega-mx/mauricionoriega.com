@@ -8,6 +8,7 @@ let background = document.getElementById("background");
 let personal_image = document.getElementById("personal-img");
 
 let about_me_bg = document.getElementById("page-2");
+let about_me_text = document.getElementById("txt-container");
 
 golf_theme_button.addEventListener('click', clickGolf);
 beach_theme_button.addEventListener('click', clickBeach);
@@ -28,12 +29,14 @@ function clickBusiness() {
     background.style.backgroundImage = "url('Assets/Professional.jpeg')";
     personal_image.src = "Assets/FotoMau.jpeg";
 
-    about_me_bg.style.backgroundImage = "url(Assets/SanPedro.jpeg)"
+    about_me_bg.style.backgroundImage = "url(Assets/SanPedro.jpeg)";
+    about_me_text.style.backgroundColor = "rgba(138, 138, 138, 0.5)";
 }
 
 function clickAI() {
     background.style.backgroundImage = "url('Assets/AIWallpaper.png')";
     personal_image.src = "Assets/MAU_AI.JPG";
 
-    about_me_bg.style.backgroundImage = "url(Assets/AI2.jpeg)"
+    about_me_bg.style.backgroundImage = "url(Assets/AI2.jpeg)";
+    about_me_text.style.backgroundColor = "rgb(236, 123, 17)";
 }
