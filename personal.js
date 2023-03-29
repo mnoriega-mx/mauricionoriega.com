@@ -28,7 +28,8 @@ function clickBeach() {
 function clickBusiness() {
     background.style.backgroundImage = "url('Assets/Professional.jpeg')";
     personal_image.src = "Assets/FotoMau.jpeg";
-
+    
+    right_background.style.backgroundImage = "Assets/SanPedro.jpeg"
     left_background.style.backgroundImage = "none"
 }
 
