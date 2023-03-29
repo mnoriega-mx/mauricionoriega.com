@@ -7,8 +7,7 @@ let background = document.getElementById("background");
 
 let personal_image = document.getElementById("personal-img");
 
-let left_background = document.getElementById("page-2-bg");
-let right_background = document.getElementById("page-2-bg2");
+let about_me_bg = document.getElementById("page-2");
 
 golf_theme_button.addEventListener('click', clickGolf);
 beach_theme_button.addEventListener('click', clickBeach);
@@ -28,16 +27,13 @@ function clickBeach() {
 function clickBusiness() {
     background.style.backgroundImage = "url('Assets/Professional.jpeg')";
     personal_image.src = "Assets/FotoMau.jpeg";
-    
-    right_background.style.backgroundImage = "url(Assets/SanPedro.jpeg)"
-    left_background.style.backgroundImage = "none"
+
+    about_me_bg.style.backgroundImage = "url(Assets/SanPedro.jpeg)"
 }
 
 function clickAI() {
     background.style.backgroundImage = "url('Assets/AIWallpaper.png')";
     personal_image.src = "Assets/MAU_AI.JPG";
 
-    right_background.style.backgroundColor = "#9d4304"
-    right_background.style.backgroundImage = "none"
-    left_background.style.backgroundImage = "url(Assets/AI2.jpeg)"
+    about_me_bg.style.backgroundImage = "url(Assets/AI2.jpeg)"
 }
