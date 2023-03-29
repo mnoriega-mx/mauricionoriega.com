@@ -166,25 +166,20 @@ button:hover {
 
 .about-me {
     height: 100%;
-    display: flex;
-    background-image: url("Assets/AI2");
+    background-image: url("Assets/SanPedro.jpeg");
     background-size: cover;
+    display: flex;
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .left-half {
     width: 50%;
-    background-color: rgb(255 244 224);
-    background-image: none;
-    background-size: cover;
     transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .right-half {
     width: 50%;
-    background-color: rgb(157, 67, 4);
-    background-image: url("Assets/SanPedro.jpeg");
-    background-size: cover;
-    background-position: center;
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .about-me h1 {
