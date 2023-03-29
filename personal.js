@@ -29,7 +29,7 @@ function clickBusiness() {
     background.style.backgroundImage = "url('Assets/Professional.jpeg')";
     personal_image.src = "Assets/FotoMau.jpeg";
     
-    right_background.style.backgroundImage = "Assets/SanPedro.jpeg"
+    right_background.style.backgroundImage = "url(Assets/SanPedro.jpeg)"
     left_background.style.backgroundImage = "none"
 }
 
