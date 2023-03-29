@@ -2,15 +2,19 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body,html {
     height: 100%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 #background {
-    background-image: url("Professional.jpeg");
+    background-image: url("Assets/Professional.jpeg");
     opacity: 0.75;
     background-size: cover;
     background-repeat: no-repeat;
@@ -36,36 +40,39 @@ body,html {
 }
 
 .theme-banner {
+    display: flex;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.418);
+    background-color: rgba(228, 220, 220, 0.767);
     border-radius: 50px;
     margin: 10px;
-    right: 0%;
-    bottom: 0%;
+    left: 0%;
+    bottom: 25%;
+    top: 25%
 }
 
 .theme-navbar {
     display: flex;
     padding: 10px;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     border-radius: 50px;
 }
 
 button {
     background-color: transparent;
     border: none;
+    text-shadow: 2px 2px lightgray;
     color: rgb(119, 93, 60);
-    font-size: 20px;
+    text-transform: uppercase;
+    font-size: 15px;
     padding: 10px;
-    font-weight: 900;
 }
 
 .name {
     position: absolute;
     bottom: 15%;
     right: 5%;
-    font-weight: 900;
     color: white;
     font-size: 80px;
     text-shadow: 2px 2px grey;
@@ -77,7 +84,6 @@ button {
 .navbar a{
     font-size: 30px;
     padding: 10px;
-    font-weight: 900;
     color: white;
     text-decoration: none;
     text-transform: capitalize;
@@ -134,7 +140,12 @@ button {
   }
 
   .img-container:hover h1{
-    transform: translate(70%, 80%);
+    transform: translate(75%, 88%);
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .img-container:hover{
+    transform: translate(-4%, -6%);
     transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 
@@ -149,5 +160,71 @@ a:hover {
 }
 
 button:hover {
-    font-size: 23px;
+    font-size: 17px;
+}
+
+
+.about-me {
+    height: 100%;
+    display: flex;
+    background-image: url("Assets/AI2");
+    background-size: cover;
+}
+
+.left-half {
+    width: 50%;
+    background-color: rgb(255 244 224);
+    background-image: none;
+    background-size: cover;
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.right-half {
+    width: 50%;
+    background-color: rgb(157, 67, 4);
+    background-image: url("Assets/SanPedro.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.about-me h1 {
+    position: relative;
+    width: 50px;
+    top: 50%;
+    left: 30%;
+    transform: translate(0,-50%);
+    color: white;
+    font-size: 80px;
+    text-shadow: 2px 2px grey;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translate(0,-50%);
+    text-align: center;
+    position: relative;
+    border-radius: 50px;
+    background-color: rgba(138, 138, 138, 0.8);
+    margin: 25px;
+}
+
+
+.about-me-text {
+    color: white;
+    font-size: 22px;
+    margin: 20px;
+    background-color: rgb(138, 138, 138);
+    display: flex;
+    border-radius: 14px;
+    border: 3px solid white;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.color {
+    color: rgb(255 244 224);
 }
