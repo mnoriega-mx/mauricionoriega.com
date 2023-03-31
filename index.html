@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+
     <div id="background"></div>
     <div class="banner">
         <div class="navbar">
             <a href="#page-2">About Me</a>
-            <a href="#">Education</a>
+            <a href="#page-3">Education</a>
             <a href="#">Personal Projects</a>
             <a href="#">Contact</a>
         </div>
@@ -22,7 +24,7 @@
             <button id="golf">Golf Theme</button>
             <button id="beach">Beach Theme</button>
             <button id="business">Business Theme</button>
-            <button id="AI">AI Theme</button>
+            <button id="ai">AI Theme</button>
         </div>
     </div>
     <div class="img-container">
@@ -33,25 +35,47 @@
         </div>
     </div>
 
+
+
     <div class="about-me" id="page-2">
-        <div class="left-half" id="page-2-bg">
-            <h1>Hello</h1>
+        <h1 class="hello">Hello</h1>
+        <div class="text-container" id="txt-container">
+            <p class="about-me-text" id="txt">
+                My name is Mauricio Noriega, I am currently 19 years old and I'm from
+                Monterrey,Mexico. Throughout my whole life, I have
+                been able to witness an era of massive advancement in technology, going from
+                VCR's, to the the first smartphone, and now artificial intelligence. My passion
+                for innovation and new tecnologies has always been a driving force in my life, 
+                always seeking for new oportunities for growth and learning, which has led me to
+                my current avocation: programming. Ever since I programmed for the first time using C,
+                I became fascinated by it, and I have been in constant learning since to become an elite
+                developer. In this page, you will learn about my current educational status, and 
+                I will showcase some of my best projects to this day.
+            </p>
         </div>
-        <div class="right-half" id="page-2-bg2">
-            <div class="text-container">
-                <p class="about-me-text">
-                    My name is Mauricio Noriega, I am currently 19 years old and I'm from
-                    Monterrey,Mexico. Throughout my whole life, I have
-                    been able to witness an era of massive advancement in technology, going from
-                    VCR's, to the the first smartphone, and now artificial intelligence. My passion
-                    for innovation and new tecnologies has always been a driving force in my life, 
-                    always seeking for new oportunities for growth and learning, which has led me to
-                    my current avocation: programming. Ever since I programmed for the first time using C,
-                    I became fascinated by it, and I have been in constant learning since to become an elite
-                    developer. In this page, you will learn about my current educational status, and 
-                    I will showcase some of my best projects to this day.
-                </p>
+    </div>
+
+
+    <div class="education" id="page-3">
+    
+        <div class="education-navbar">
+            <button id="high-school">High School</button>
+            <button id="university">University</button>
+            <button id="certifications">Certifications</button>
+        </div>
+        
+        <div class="education-main">
+            <h1 id="education-h1">High School</h1>
+            <p id="education-txt">
+                Graduated from Prepa Tec Santa Catarina from Honors program with final average of 90.5
+            </p>
+            <p id="grad-date" hidden>Expected graduation date: 2026</p>
+            <div class="diploma-navbar" id="diploma-navbar">
+                <button id="hs-transcript">High School Transcript</button>
+                <button id="hs-diploma">High School Diploma</button>
+                <button id="ib-diploma">IB Diploma</button>
             </div>
+            <iframe src="Assets/TranscriptHS.pdf#toolbar=0" id="doc"></iframe>
         </div>
     </div>
     <script src="personal.js"></script>
