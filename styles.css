@@ -15,12 +15,12 @@ html {
 
 #background {
     background-image: url("Assets/Professional.jpeg");
-    opacity: 0.75;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     height: 100%;
     transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.1);
 }
 
 .banner {
@@ -59,7 +59,7 @@ html {
     border-radius: 50px;
 }
 
-button {
+.theme-navbar button {
     background-color: transparent;
     border: none;
     text-shadow: 2px 2px lightgray;
@@ -98,6 +98,7 @@ button {
     height: 576px;
     width: 432px;
     display: block;
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 #personal-img {
@@ -161,34 +162,30 @@ a:hover {
 
 button:hover {
     font-size: 17px;
+    transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
+
+/* 
+ABOUT ME
+*/
 
 
 .about-me {
     height: 100%;
     background-image: url("Assets/SanPedro.jpeg");
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.1);
     background-size: cover;
     background-position: 0px -50px;
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
     display: flex;
-    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.left-half {
-    width: 50%;
-    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-.right-half {
-    width: 50%;
-    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-.about-me h1 {
+.hello {
     position: relative;
-    width: 50px;
+    height: fit-content;
     top: 50%;
-    left: 30%;
+    left: 15%;
     transform: translate(0,-50%);
     color: white;
     font-size: 80px;
@@ -200,12 +197,15 @@ button:hover {
     justify-content: center;
     align-items: center;
     top: 50%;
+    left: 35%;
     transform: translate(0,-50%);
     text-align: center;
     position: relative;
     background-color: rgba(138, 138, 138, 0.7);
     border-radius: 50px;
     margin: 25px;
+    width: 600px;
+    height: 500px;
 }
 
 
@@ -220,6 +220,87 @@ button:hover {
     padding: 10px;
 }
 
-.color {
-    color: rgb(255 244 224);
+/* EDUCATION */
+
+
+.education {
+    display: flex;
+    height: 100%;    
+}
+
+.education-navbar {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    justify-content: space-around;
+    background-color: #373737;
+    border-right: 5px solid white;
+}
+
+.education-navbar button {
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.education-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    background-image: url("Assets/BiblioTec.jpeg");
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.1);
+    
+}
+
+#education-h1 {
+    color: white;
+    font-size: 60px;
+    margin: 5px;
+    text-shadow: 2px 2px grey;
+}
+
+#education-txt {
+    color: white;
+    margin: 5px;
+    font-size: 20px;
+    padding: 5px;
+    background-color: rgba(68, 68, 68, 0.3);
+}
+
+#grad-date {
+    color: white;
+    margin: 5px;
+    font-size: 20px;
+    background-color: rgba(68, 68, 68, 0.3);
+}
+
+.diploma-navbar {
+    display: flex;
+}
+
+.diploma-navbar button{
+    margin: 20px;
+    text-decoration: none;
+    background-color: #373737;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 10px;
+    transition: all .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#hs-transcript {
+    border: 2px solid white;
+}
+
+#doc {
+    width: 448px;
+    height: 571px;
+    margin: 20px;
+    border: 5px solid #373737;
 }
