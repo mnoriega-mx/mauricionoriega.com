@@ -131,3 +131,4 @@ function clickIBdiploma() {
     hs_diploma_button.style.border = "none"
     ib_diploma_button.style.border = "2px solid white"
 }
+
