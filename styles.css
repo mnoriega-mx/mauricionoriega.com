@@ -174,7 +174,6 @@ ABOUT ME
 .about-me {
     height: 100%;
     background-image: url("Assets/SanPedro.jpeg");
-    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.1);
     background-size: cover;
     background-position: 0px -50px;
     transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -201,7 +200,7 @@ ABOUT ME
     transform: translate(0,-50%);
     text-align: center;
     position: relative;
-    background-color: rgba(138, 138, 138, 0.7);
+    background-color: #9a9190;
     border-radius: 50px;
     margin: 25px;
     width: 600px;
@@ -220,12 +219,19 @@ ABOUT ME
     padding: 10px;
 }
 
+.color {
+    color: rgb(255 244 224);
+    color: rgb(138, 138, 138);
+    color: rgb(90, 116, 90);
+}
+
+
 /* EDUCATION */
 
 
 .education {
     display: flex;
-    height: 100%;    
+    height: 100%;
 }
 
 .education-navbar {
@@ -233,8 +239,7 @@ ABOUT ME
     flex-direction: column;
     width: 15%;
     justify-content: space-around;
-    background-color: #373737;
-    border-right: 5px solid white;
+    background-color: #9a9190;
 }
 
 .education-navbar button {
@@ -286,7 +291,7 @@ ABOUT ME
 .diploma-navbar button{
     margin: 20px;
     text-decoration: none;
-    background-color: #373737;
+    background-color: #9a9190;
     border: none;
     border-radius: 50px;
     color: white;
@@ -302,5 +307,92 @@ ABOUT ME
     width: 448px;
     height: 571px;
     margin: 20px;
-    border: 5px solid #373737;
+    border: 3px solid white;
+}
+
+
+
+
+.contact {
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    background-color: #373737;
+}
+
+
+.info-container-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    margin-right: 100px;
+}
+
+.info-container-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    margin-left: 100px;
+}
+
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 450px;
+    margin: 15px;
+    background-color: transparent;
+}
+
+.social-container {
+    width: fit-content;
+    height: fit-content;
+    margin: 15px;
+    width: 35px;
+    background-color: transparent;
+}
+
+.contact-container img {
+    justify-content: flex-start;
+    border: none;
+}
+
+.contact-container p {
+    justify-content: center;
+}
+
+.info {
+    font-size: 20px;
+    margin: 20px;
+    text-decoration: none;
+    color: white;
+
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+    transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#gmail-logo {
+    height: 30px;
+    width: 40px;
+}
+
+.social-container img:hover {
+    height: 45px;
+    width: 45px;
+    transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+
+
+
+.portfolio {
+    height: 100%;
+    background-color: #75979d;
 }
