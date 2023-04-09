@@ -1,4 +1,3 @@
-
 let golf_theme_button = document.getElementById('golf');
 let beach_theme_button = document.getElementById('beach');
 let business_theme_button = document.getElementById('business');
@@ -131,4 +130,3 @@ function clickIBdiploma() {
     hs_diploma_button.style.border = "none"
     ib_diploma_button.style.border = "2px solid white"
 }
-
