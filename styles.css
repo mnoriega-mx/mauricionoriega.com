@@ -198,7 +198,8 @@ ABOUT ME
     transform: translate(0,-50%);
     text-align: center;
     position: relative;
-    border-radius: 50px;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
     margin: 25px;
     width: 600px;
     height: 500px;
@@ -214,6 +215,7 @@ ABOUT ME
     justify-content: center;
     align-items: center;
     padding: 10px;
+    text-align: justify;
 }
 
 .color {
@@ -428,3 +430,4 @@ ABOUT ME
     width: 45px;
     transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
+
