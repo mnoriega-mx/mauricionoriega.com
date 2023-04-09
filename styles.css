@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Clarkson",Helvetica,sans-serif;
 }
 
 body,html {
@@ -173,9 +173,7 @@ ABOUT ME
 
 .about-me {
     height: 100%;
-    background-image: url("Assets/SanPedro.jpeg");
-    background-size: cover;
-    background-position: 0px -50px;
+    background-color: #9a9190cc;
     transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
     display: flex;
 }
@@ -200,7 +198,6 @@ ABOUT ME
     transform: translate(0,-50%);
     text-align: center;
     position: relative;
-    background-color: #9a9190;
     border-radius: 50px;
     margin: 25px;
     width: 600px;
@@ -226,8 +223,9 @@ ABOUT ME
 }
 
 
-/* EDUCATION */
 
+
+/* EDUCATION */
 
 .education {
     display: flex;
@@ -239,7 +237,7 @@ ABOUT ME
     flex-direction: column;
     width: 15%;
     justify-content: space-around;
-    background-color: #9a9190;
+    background-color: #9a9190cc;
 }
 
 .education-navbar button {
@@ -291,7 +289,7 @@ ABOUT ME
 .diploma-navbar button{
     margin: 20px;
     text-decoration: none;
-    background-color: #9a9190;
+    background-color: #9a9190cc;
     border: none;
     border-radius: 50px;
     color: white;
@@ -309,6 +307,48 @@ ABOUT ME
     margin: 20px;
     border: 3px solid white;
 }
+
+
+
+
+
+
+.portfolio {
+    display: flex;
+    height: 100%;
+}
+
+.portfolio-navbar {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    justify-content: space-around;
+    background-color: #9a9190cc;
+}
+
+.portfolio-navbar button {
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.portfolio-main {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    background-color: #9a9190cc;
+    align-items: center;
+}
+
+#portfolio-h1 {
+    color: white;
+    font-size: 60px;
+    margin: 5px;
+    text-shadow: 2px 2px grey;
+}
+
 
 
 
@@ -387,12 +427,4 @@ ABOUT ME
     height: 45px;
     width: 45px;
     transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-
-
-
-.portfolio {
-    height: 100%;
-    background-color: #75979d;
 }
