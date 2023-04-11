@@ -1,3 +1,4 @@
+
 let golf_theme_button = document.getElementById('golf');
 let beach_theme_button = document.getElementById('beach');
 let business_theme_button = document.getElementById('business');
@@ -43,6 +44,46 @@ let grad_date = document.getElementById("grad-date");
 let hs_string = "Graduated from Prepa Tec Santa Catarina from Honors program with final average of 90.5";
 let uni_string = "First year student at Tec de Monterrey. Currently studying B.S in Computer Science";
 let cer_string = ""
+
+
+
+/* PORTFOLIO*/
+let mathJump_button = document.getElementById("math-jump");
+let ticTacToe_button = document.getElementById("tic-tac-toe");
+let memoryGame_button = document.getElementById("memory-game");
+let oms_button = document.getElementById("oms");
+let lotery_button = document.getElementById("lotery");
+
+let mathJumpCover = document.getElementById("math-jump-container")
+let ticTacToeCover = document.getElementById("tic-tac-toe-container")
+let memoryGameCover = document.getElementById("memory-game-container")
+let omsCover = document.getElementById("oms-container")
+let loteryCover = document.getElementById("lotery-container")
+
+let project_view = document.getElementById("project");
+let backButton = document.getElementById("back-to-portfolio");
+
+mathJump_button.addEventListener('click', clickMathJump);
+mathJump_button.addEventListener('mouseover', hoverMathJump);
+mathJump_button.addEventListener('mouseout', notHoverMathJump);
+
+ticTacToe_button.addEventListener('click', clickTicTacToe);
+ticTacToe_button.addEventListener('mouseover', hoverTicTacToe);
+ticTacToe_button.addEventListener('mouseout', notHoverTicTacToe);
+
+memoryGame_button.addEventListener('click', clickMemoryGame);
+memoryGame_button.addEventListener('mouseover', hoverMemoryGame);
+memoryGame_button.addEventListener('mouseout', notHoverMemoryGame);
+
+oms_button.addEventListener('click', clickOMS);
+oms_button.addEventListener('mouseover', hoverOMS);
+oms_button.addEventListener('mouseout', notHoverOMS);
+
+lotery_button.addEventListener('click', clickLotery);
+lotery_button.addEventListener('mouseover', hoverLotery);
+lotery_button.addEventListener('mouseout', notHoverLotery);
+
+backButton.addEventListener('click', clickBack)
 
 
 
@@ -130,3 +171,57 @@ function clickIBdiploma() {
     hs_diploma_button.style.border = "none"
     ib_diploma_button.style.border = "2px solid white"
 }
+
+function clickMathJump() {
+    project_view.style.display= 'block';
+}
+function hoverMathJump() {
+    mathJumpCover.style.margin = "none"
+}
+function notHoverMathJump() {
+    mathJumpCover.style.margin = "5px"
+}
+
+function clickTicTacToe() {
+    project_view.style.display= 'block';
+}
+function hoverTicTacToe() {
+    ticTacToeCover.style.boxShadow = "0px 0px 15px 8px rgba(0,0,0,.4)"
+}
+function notHoverTicTacToe() {
+    ticTacToeCover.style.boxShadow = "none"
+}
+
+function clickMemoryGame() {
+    project_view.style.display= 'block';
+}
+function hoverMemoryGame() {
+    memoryGameCover.style.boxShadow = "0px 0px 15px 8px rgba(0,0,0,.4)"
+}
+function notHoverMemoryGame() {
+    memoryGameCover.style.boxShadow = "none"
+}
+
+function clickOMS() {
+    project_view.style.display= 'block';
+}
+function hoverOMS() {
+    omsCover.style.boxShadow = "0px 0px 15px 8px rgba(0,0,0,.4)"
+}
+function notHoverOMS() {
+    omsCover.style.boxShadow = "none"
+}
+
+function clickLotery() {
+    project_view.style.display= 'block';
+}
+function hoverLotery() {
+    loteryCover.style.boxShadow = "0px 0px 15px 8px rgba(0,0,0,.4)"
+}
+function notHoverLotery() {
+    loteryCover.style.boxShadow = "none"
+}
+
+function clickBack() {
+    project_view.style.display= 'none';
+ }
