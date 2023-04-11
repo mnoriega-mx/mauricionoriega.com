@@ -1,162 +1,515 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-<body>
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Clarkson",Helvetica,sans-serif;
+}
+
+body,html {
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#background {
+    background-image: url("Assets/Professional.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.1);
+}
+
+.banner {
+    position: absolute;
+    padding: 10px;
+    width: 60%;
+    left: 40%;
+    top: 0%;
+}
+
+.navbar {
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 50px;
+}
+
+.theme-banner {
+    display: flex;
+    position: absolute;
+    background-color: rgba(228, 220, 220, 0.767);
+    border-radius: 50px;
+    margin: 10px;
+    left: 0%;
+    bottom: 25%;
+    top: 25%
+}
+
+.theme-navbar {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.theme-navbar button {
+    background-color: transparent;
+    border: none;
+    text-shadow: 2px 2px lightgray;
+    color: rgb(119, 93, 60);
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.name {
+    position: absolute;
+    bottom: 15%;
+    right: 5%;
+    color: white;
+    font-size: 80px;
+    text-shadow: 2px 2px grey;
+    transform: translate(65%, 75%);
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    line-height: 1.2;
+}
+
+.navbar a{
+    font-size: 30px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    text-shadow: 2px 2px grey;
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.img-container {
+    position: absolute;
+    left: 20%;
+    bottom: 10%;
+    height: 576px;
+    width: 432px;
+    display: block;
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#personal-img {
+    object-fit: cover;
+    border-radius: 50px;
+    box-shadow: 10px 15px 25px 0 rgba(0,0,0,.4);
+    display: block;
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    margin-top: -10px;
+}
+
+.img-container .glow-wrap{
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin-top: -10px;
+  }
+
+  .img-container .glow{
+    display: block;
+    position:absolute;
+    width: 40%;
+    height: 200%;
+    background: rgba(255,255,255,.2);
+    top: 0;
+    filter: blur(5px);
+    transform: rotate(45deg) translate(-450%, 0);
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .img-container:hover .glow{
+    transform: rotate(45deg) translate(450%, 0);
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .img-container:hover img{
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,.1);
+  }
+
+  .img-container:hover h1{
+    transform: translate(75%, 88%);
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .img-container:hover{
+    transform: translate(-4%, -6%);
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .img-container:hover img,
+  .img-container:hover .glow-wrap{
+    margin-top: 0;
+}
+
+a:hover {
+    font-size: 33px;
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+button:hover {
+    font-size: 17px;
+    transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+
+/* 
+ABOUT ME
+*/
+
+
+.about-me {
+    height: 70%;
+    background-color: white;
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    display: flex;
+}
+
+.hello {
+    position: relative;
+    height: fit-content;
+    top: 50%;
+    left: 15%;
+    transform: translate(0,-50%);
+    color: black;
+    font-size: 50px;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 35%;
+    transform: translate(0,-50%);
+    text-align: center;
+    position: relative;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    margin: 25px;
+    width: 600px;
+    height: 400px;
+}
+
+
+.about-me-text {
+    color: black;
+    font-size: 20px;
+    margin: 20px;
+    display: flex;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: justify;
+}
+
+.color {
+    color: rgb(255 244 224);
+    color: rgb(138, 138, 138);
+    color: rgb(90, 116, 90);
+}
 
 
 
+
+/* EDUCATION */
+
+.education {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.title {
+    position: relative;
+    width: fit-content;
+    left: 15%;
+    top: 3%;
+    color: black;
+    font-size: 25px;
+}
+
+.education-navbar {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 90%;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.education-navbar button {
+    background-color: transparent;
+    border: none;
+    color: black;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.education-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 90%;
+    background-image: url("Assets/BiblioTec.jpeg");
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.1);
     
+}
 
+#education-h1 {
+    color: white;
+    font-size: 60px;
+    margin: 5px;
+    text-shadow: 2px 2px grey;
+}
 
-    <div id="background"></div>
-    <div class="banner">
-        <div class="navbar">
-            <a href="#page-2">About Me</a>
-            <a href="#page-3">Education</a>
-            <a href="#page-4">Portfolio</a>
-            <a href="#page-5">Contact</a>
-        </div>
-    </div>
-    <div class="theme-banner">
-        <div class="theme-navbar">
-            <button id="golf">Golf Theme</button>
-            <button id="beach">Beach Theme</button>
-            <button id="business">Business Theme</button>
-            <button id="ai">AI Theme</button>
-        </div>
-    </div>
-    <div class="img-container">
-        <h1 class="name">Mauricio Noriega</h1>
-        <img id="personal-img" src="Assets/FotoMau.jpeg" height="576" width="432">
-        <div class="glow-wrap">
-            <i class="glow"></i>
-        </div>
-    </div>
+#education-txt {
+    color: white;
+    margin: 5px;
+    font-size: 20px;
+    padding: 5px;
+    background-color: rgba(68, 68, 68, 0.3);
+}
 
+#grad-date {
+    color: white;
+    margin: 5px;
+    font-size: 20px;
+    background-color: rgba(68, 68, 68, 0.3);
+}
 
+.diploma-navbar {
+    display: flex;
+}
 
-    <div class="about-me" id="page-2">
-        <h1 class="hello">Hello</h1>
-        <div class="text-container" id="txt-container">
-            <p class="about-me-text" id="txt">
-                My name is Mauricio Noriega, I am currently 19 years old and I'm from
-                Monterrey,Mexico. Throughout my whole life, I have
-                been able to witness an era of massive advancement in technology, going from
-                VCR's, to the the first smartphone, and now artificial intelligence. My passion
-                for innovation and new tecnologies has always been a driving force in my life, 
-                always seeking for new oportunities for growth and learning, which has led me to
-                my current avocation: programming. Ever since I programmed for the first time using C,
-                I became fascinated by it, and I have been in constant learning since to become an elite
-                developer. In this page, you will learn about my current educational status, and 
-                I will showcase some of my best projects to this day.
-            </p>
-        </div>
-    </div>
+.diploma-navbar button{
+    margin: 20px;
+    text-decoration: none;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    color: black;
+    padding: 10px;
+    transition: all .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
 
+#hs-transcript {
+    border: 2px solid white;
+}
 
-    <p class="title"><strong>Education</strong></p>
-    <div class="education" id="page-3">
-        
-        <div class="education-navbar">
-            <button id="high-school">High School</button>
-            <button id="university">University</button>
-            <button id="certifications">Certifications</button>
-        </div>
-        
-        <div class="education-main">
-            <h1 id="education-h1">High School</h1>
-            <p id="education-txt">
-                Graduated from Prepa Tec Santa Catarina from Honors program with final average of 90.5
-            </p>
-            <p id="grad-date" hidden>Expected graduation date: 2026</p>
-            <div class="diploma-navbar" id="diploma-navbar">
-                <button id="hs-transcript">High School Transcript</button>
-                <button id="hs-diploma">High School Diploma</button>
-                <button id="ib-diploma">IB Diploma</button>
-            </div>
-            <iframe src="Assets/TranscriptHS.pdf#toolbar=0" id="doc"></iframe>
-        </div>
-    </div>
-
-
-    <p class="title"><strong>Portfolio</strong></p>
-    <div class="portfolio" id="page-4">
-        <div class="portfolio-navbar">
-            <button id="math-jump">Math Jump</button>
-            <button id="tic-tac-toe">Tic Tac Toe</button>
-            <button id="memory-game">Memory Game</button>
-            <button id="oms">Order Management System</button>
-            <button id="lotery">Lottery/Bingo Algorithm</button>
-        </div>
-        
-        <div class="portfolio-main">
-            <div class="portfolio-layout">
-                <div class="first-row">
-                    <div class="project-container" id="tic-tac-toe-container">
-                        <img src="Assets/TicTacToe.png" class="project-cover">
-                    </div>
-                    <div class="project-container"></div>
-                    <div class="project-container" id="memory-game-container">
-                        <img src="Assets/MemoryGame.png" class="project-cover">
-                    </div>
-                </div>
-                <div class="second-row" id="row2">
-                    <div class="project-container"></div>
-                    <div class="project-container" id="math-jump-container">
-                        <img src="Assets/MathJump.png" class="project-cover">
-                    </div>
-                    <div class="project-container"></div>
-                </div>
-                <div class="third-row" id="row2">
-                    <div class="project-container" id="oms-container">
-                        <img src="Assets/OMS.png" class="project-cover">
-                    </div>
-                    <div class="project-container"></div>
-                    <div class="project-container" id="lotery-container">
-                        <img src="Assets/Lotery.png" class="project-cover">
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-view" id="project">
-                <button id="back-to-portfolio">&lt; Back to portfolio</button>
-            </div>
-        </div>
-    </div>
+#doc {
+    width: 448px;
+    height: 571px;
+    margin: 20px;
+    border: 3px solid white;
+}
 
 
 
 
-    <div class="contact" id="page-5">
-        <div class="info-container-1">
-            <div class="contact-container">
-                <img src="Assets/GmailLogo.png" class="logo" id="gmail-logo">
-                <p class="info">mau.noriega10@gmial.com</p>
-            </div>
-            <div class="contact-container">
-                <img src="Assets/WhatsappLogo.png" class="logo">
-                <p class="info">+52 (81) 8280 0431</p>
-            </div>
-        </div> 
-
-        <div class="info-container-2">
-            <a href="https://www.linkedin.com/in/mauricionoriegaprofile/" target="_blank" class="social-container">
-                <img src="Assets/LinkedinLogo.png" class="logo">
-            </a>
-            <a href="https://github.com/mnoriega-mx" target="_blank" class="social-container">
-                <img src="Assets/GithubLogo.png" class="logo">
-            </a>
-        </div>
-
-    </div>
 
 
-    <script src="personal.js"></script>
-    
-</body>
-</html>
+.portfolio {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.portfolio-navbar {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 90%;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.portfolio-navbar button {
+    background-color: transparent;
+    border: none;
+    color: black;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.portfolio-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    align-items: center;
+}
+
+.portfolio-layout {
+    display: flex;
+    flex-direction: column;
+    height: 98%;
+    width: 100%;
+}
+
+
+.first-row {
+    display: flex;
+    justify-content: space-around;
+    height: 33.333333%;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.second-row {
+    display: flex;
+    justify-content: space-around;
+    height: 33.333333%;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.third-row {
+    display: flex;
+    justify-content: space-around;
+    height: 33.333333%;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.project-container {
+    height: 100%;
+    width: 33.333333%;
+    margin: 5px;
+    transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background-color: #24884c;
+}
+
+.project-cover {
+    height: 100%;
+    width: 100%;
+}
+
+.project-view {
+    display: flex;
+    display: none;
+    position: absolute;
+    height: 90%;
+    width: 80%;
+    background-color: wheat;
+    transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+
+
+#back-to-portfolio {
+    position: absolute;
+    top: 2%;
+    right: 4%;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    height: fit-content;
+    width: fit-content;
+}
+
+#back-to-portfolio:hover {
+    font-size: 22px;
+}
+
+#oms-container:hover {
+    box-shadow: 0px 0px 15px 8px rgba(0,0,0,.4);
+}
+
+
+.contact {
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    background-color: #373737;
+}
+
+
+.info-container-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    margin-right: 100px;
+}
+
+.info-container-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    margin-left: 100px;
+}
+
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 450px;
+    margin: 15px;
+    background-color: transparent;
+}
+
+.social-container {
+    width: fit-content;
+    height: fit-content;
+    margin: 15px;
+    width: 35px;
+    background-color: transparent;
+}
+
+.contact-container img {
+    justify-content: flex-start;
+    border: none;
+}
+
+.contact-container p {
+    justify-content: center;
+}
+
+.info {
+    font-size: 20px;
+    margin: 20px;
+    text-decoration: none;
+    color: white;
+
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+    transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#gmail-logo {
+    height: 30px;
+    width: 40px;
+}
+
+.social-container img:hover {
+    height: 45px;
+    width: 45px;
+    transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
