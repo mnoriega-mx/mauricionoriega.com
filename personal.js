@@ -1,4 +1,5 @@
 
+
 let golf_theme_button = document.getElementById('golf');
 let beach_theme_button = document.getElementById('beach');
 let business_theme_button = document.getElementById('business');
@@ -54,11 +55,11 @@ let memoryGame_button = document.getElementById("memory-game");
 let oms_button = document.getElementById("oms");
 let lotery_button = document.getElementById("lotery");
 
-let mathJumpCover = document.getElementById("math-jump-container")
-let ticTacToeCover = document.getElementById("tic-tac-toe-container")
-let memoryGameCover = document.getElementById("memory-game-container")
-let omsCover = document.getElementById("oms-container")
-let loteryCover = document.getElementById("lotery-container")
+let mathJumpCover = document.getElementById("container-5")
+let ticTacToeCover = document.getElementById("container-1")
+let memoryGameCover = document.getElementById("container-3")
+let omsCover = document.getElementById("container-7")
+let loteryCover = document.getElementById("container-9")
 
 let project_view = document.getElementById("project");
 let backButton = document.getElementById("back-to-portfolio");
@@ -101,8 +102,8 @@ function clickBusiness() {
     background.style.backgroundImage = "url('Assets/Professional.jpeg')";
     personal_image.src = "Assets/FotoMau.jpeg";
 
-    about_me_bg.style.backgroundImage = "url(Assets/SanPedro.jpeg)";
-    about_me_text.style.backgroundColor = "rgba(138, 138, 138, 0.5)";
+    about_me_bg.style.backgroundImage = "";
+    about_me_text.style.backgroundColor = "";
 }
 
 function clickAI() {
@@ -173,17 +174,25 @@ function clickIBdiploma() {
 }
 
 function clickMathJump() {
-    project_view.style.display= 'block';
+    project_view.style.display= 'flex';
+    ticTacToeCover.hidden = true;
+    memoryGameCover.hidden = true;
+    omsCover.hidden = true;
+    loteryCover.hidden = true;
 }
 function hoverMathJump() {
-    mathJumpCover.style.margin = "none"
+    mathJumpCover.style.boxShadow = "0px 0px 15px 8px rgba(0,0,0,.4)"
 }
 function notHoverMathJump() {
-    mathJumpCover.style.margin = "5px"
+    mathJumpCover.style.boxShadow = "none"
 }
 
 function clickTicTacToe() {
     project_view.style.display= 'block';
+    ticTacToeCover.hidden = true;
+    memoryGameCover.hidden = true;
+    omsCover.hidden = true;
+    loteryCover.hidden = true;
 }
 function hoverTicTacToe() {
     ticTacToeCover.style.boxShadow = "0px 0px 15px 8px rgba(0,0,0,.4)"
@@ -194,6 +203,10 @@ function notHoverTicTacToe() {
 
 function clickMemoryGame() {
     project_view.style.display= 'block';
+    ticTacToeCover.hidden = true;
+    memoryGameCover.hidden = true;
+    omsCover.hidden = true;
+    loteryCover.hidden = true;
 }
 function hoverMemoryGame() {
     memoryGameCover.style.boxShadow = "0px 0px 15px 8px rgba(0,0,0,.4)"
@@ -204,6 +217,10 @@ function notHoverMemoryGame() {
 
 function clickOMS() {
     project_view.style.display= 'block';
+    ticTacToeCover.hidden = true;
+    memoryGameCover.hidden = true;
+    omsCover.hidden = true;
+    loteryCover.hidden = true;
 }
 function hoverOMS() {
     omsCover.style.boxShadow = "0px 0px 15px 8px rgba(0,0,0,.4)"
@@ -214,6 +231,10 @@ function notHoverOMS() {
 
 function clickLotery() {
     project_view.style.display= 'block';
+    ticTacToeCover.hidden = true;
+    memoryGameCover.hidden = true;
+    omsCover.hidden = true;
+    loteryCover.hidden = true;
 }
 function hoverLotery() {
     loteryCover.style.boxShadow = "0px 0px 15px 8px rgba(0,0,0,.4)"
@@ -224,4 +245,8 @@ function notHoverLotery() {
 
 function clickBack() {
     project_view.style.display= 'none';
+    ticTacToeCover.hidden = false;
+    memoryGameCover.hidden = false;
+    omsCover.hidden = false;
+    loteryCover.hidden = false;
  }
