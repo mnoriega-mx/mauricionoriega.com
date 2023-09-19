@@ -65,6 +65,13 @@ let project_view = document.getElementById("project");
 let backButton = document.getElementById("back-to-portfolio");
 
 let project_image = document.getElementById("project-image");
+let project_text = document.getElementById("project-text");
+
+let mathJump_string = "The objective of Math Jump is to encourage young students to practice their math skills in a fun way. Math Jump is fully programed on Python, and can run in all operating systems.";
+let ticTacToe_string = "This classic game of Tic Tac Toe runs in the web, and was created from scratch using HTML, CSS and JavaScript. It is a two player game, and the first player to get three in a row wins. This website is currently hosted on GitHub Pages.";
+let memoryGame_stringf = "This memory game is a fun project made to compete head to head with your friends. The objective of the game is to find all the pairs of cards before your opponent does. This project was fully coded in python and runs on your terminal.";
+let oms_string = "OMS is a project made to simulate a business managing sales and inventory. In this case, GameStop is the business that is being simulated. This project was fully coded in python and runs on your terminal. It is my first ever coding project 3 years ago, however some asjustments have been made.";
+let lotery_string = "This project is a simulation of a lottery/bingo game. The algorithm was fully coded in python and runs on your terminal.";
 
 mathJump_button.addEventListener('click', clickMathJump);
 mathJump_button.addEventListener('mouseover', hoverMathJump);
@@ -111,9 +118,6 @@ function clickBusiness() {
 function clickAI() {
     background.style.backgroundImage = "url('Assets/AIWallpaper.png')";
     personal_image.src = "Assets/MAU_AI.JPG";
-
-    about_me_bg.style.backgroundImage = "url(Assets/AI2.jpeg)";
-    about_me_text.style.backgroundColor = "rgb(236, 123, 17)";
 }
 
 function clickHS() {
@@ -178,6 +182,7 @@ function clickIBdiploma() {
 function clickMathJump() {
     project_view.style.display= 'flex';
     project_image.src = "Assets/MathJump.png"
+    project_text.innerHTML = mathJump_string;
 }
 function hoverMathJump() {
     mathJumpCover.style.border = "5px solid white"
@@ -189,6 +194,8 @@ function notHoverMathJump() {
 function clickTicTacToe() {
     project_view.style.display= 'flex';
     project_image.src = "Assets/TicTacToe.png"
+    project_text.innerHTML = ticTacToe_string;
+
 }
 function hoverTicTacToe() {
     ticTacToeCover.style.border = "5px solid white"
@@ -200,6 +207,7 @@ function notHoverTicTacToe() {
 function clickMemoryGame() {
     project_view.style.display= 'flex';
     project_image.src = "Assets/MemoryGame.png"
+    project_text.innerHTML = memoryGame_stringf;
 }
 function hoverMemoryGame() {
     memoryGameCover.style.border = "5px solid white"
@@ -211,6 +219,7 @@ function notHoverMemoryGame() {
 function clickOMS() {
     project_view.style.display= 'flex';
     project_image.src = "Assets/OMS.png"
+    project_text.innerHTML = oms_string;
 }
 function hoverOMS() {
     omsCover.style.border = "5px solid white"
@@ -222,6 +231,7 @@ function notHoverOMS() {
 function clickLotery() {
     project_view.style.display= 'flex';
     project_image.src = "Assets/Lotery.png"
+    project_text.innerHTML = lotery_string;
 }
 function hoverLotery() {
     loteryCover.style.border = "5px solid white"
