@@ -24,6 +24,8 @@ let hs_button = document.getElementById("high-school");
 let uni_button = document.getElementById("university");
 let cer_button = document.getElementById("certifications");
 
+let hsActive = true;
+
 let hs_transcript_button = document.getElementById("hs-transcript");
 let hs_diploma_button = document.getElementById("hs-diploma");
 let ib_diploma_button = document.getElementById("ib-diploma");
@@ -46,14 +48,18 @@ let hs_string = "Graduated from Prepa Tec Santa Catarina from Honors program wit
 let uni_string = "First year student at Tec de Monterrey. Currently studying B.S in Computer Science";
 let cer_string = ""
 
+let classes1S = document.getElementById("1s-classes");
+let classes2S = document.getElementById("2s-classes");
+let classes3S = document.getElementById("3s-classes");
+
 
 
 /* PORTFOLIO*/
+let investor_button = document.getElementById("investor");
 let mathJump_button = document.getElementById("math-jump");
 let ticTacToe_button = document.getElementById("tic-tac-toe");
 let memoryGame_button = document.getElementById("memory-game");
 let oms_button = document.getElementById("oms");
-let lotery_button = document.getElementById("lotery");
 
 let mathJumpCover = document.getElementById("container-5")
 let ticTacToeCover = document.getElementById("container-1")
@@ -70,8 +76,8 @@ let project_text = document.getElementById("project-text");
 let mathJump_string = "The objective of Math Jump is to encourage young students to practice their math skills in a fun way. Math Jump is fully programed on Python, and can run in all operating systems.";
 let ticTacToe_string = "This classic game of Tic Tac Toe runs in the web, and was created from scratch using HTML, CSS and JavaScript. It is a two player game, and the first player to get three in a row wins. This website is currently hosted on GitHub Pages.";
 let memoryGame_stringf = "This memory game is a fun project made to compete head to head with your friends. The objective of the game is to find all the pairs of cards before your opponent does. This project was fully coded in python and runs on your terminal.";
-let oms_string = "OMS is a project made to simulate a business managing sales and inventory. In this case, GameStop is the business that is being simulated. This project was fully coded in python and runs on your terminal. It is my first ever coding project 3 years ago, however some asjustments have been made.";
-let lotery_string = "This project is a simulation of a lottery/bingo game. The algorithm was fully coded in python and runs on your terminal.";
+let oms_string = "OMS is a project made to simulate a business managing sales and inventory. In this case, GameStop is the business that is being simulated. This project was fully coded in python and runs on your terminal. This is my first ever coding project 3 years ago.";
+let investor_string = "Mr. Investor is an interactive chatbot programmed to help you be finnancially responsible. This project was coded using Next.js and integrates the OpenAI API.";
 
 mathJump_button.addEventListener('click', clickMathJump);
 mathJump_button.addEventListener('mouseover', hoverMathJump);
@@ -89,9 +95,9 @@ oms_button.addEventListener('click', clickOMS);
 oms_button.addEventListener('mouseover', hoverOMS);
 oms_button.addEventListener('mouseout', notHoverOMS);
 
-lotery_button.addEventListener('click', clickLotery);
-lotery_button.addEventListener('mouseover', hoverLotery);
-lotery_button.addEventListener('mouseout', notHoverLotery);
+investor_button.addEventListener('click', clickLotery);
+investor_button.addEventListener('mouseover', hoverLotery);
+investor_button.addEventListener('mouseout', notHoverLotery);
 
 backButton.addEventListener('click', clickBack)
 
@@ -126,20 +132,36 @@ function clickHS() {
     diploma_navbar.style.display = "block"
     doc.src = "Assets/TranscriptHS.pdf#toolbar=0";
     grad_date.hidden = true;
-    doc.style.width = "448px"
-    doc.style.height = "571px"
-    hs_transcript_button.style.border = "2px solid white"
-    hs_diploma_button.style.border = "none"
-    ib_diploma_button.style.border = "none"
+    doc.style.width = "448px";
+    doc.style.height = "571px";
+    hs_transcript_button.style.border = "2px solid white";
+    hs_diploma_button.style.border = "none";
+    ib_diploma_button.style.border = "none";
+    hs_transcript_button.innerHTML = "High School Transcript";
+    hs_diploma_button.innerHTML = "High School Diploma";
+    ib_diploma_button.innerHTML = "IB Diploma";
+    doc.style.display = "block";
+    classes1S.hidden = true;
+    classes2S.hidden = true;
+    classes3S.hidden = true;
+    hsActive = true;
 }
 
 function clickUni() {
     title.innerHTML = "University";
     educationTxt.innerHTML = uni_string;
-    diploma_navbar.style.display = "none";
+    hs_transcript_button.style.border = "2px solid white";
+    hs_diploma_button.style.border = "none";
+    ib_diploma_button.style.border = "none";
+    hs_transcript_button.innerHTML = "1st Semester";
+    hs_diploma_button.innerHTML = "2nd Semester";
+    ib_diploma_button.innerHTML = "3rd Semester";
+    diploma_navbar.style.display = "block";
     doc.src = "";
-    doc.style.border = "none"
+    doc.style.border = "none";
     grad_date.hidden = false;
+    classes1S.hidden = false;
+    hsActive = false;
 }
 
 function clickCer() {
@@ -148,96 +170,124 @@ function clickCer() {
     diploma_navbar.style.display = "none";
     doc.src = "Assets/Certifications.pdf#toolbar=0";
     grad_date.hidden = true;
-    doc.style.width = "448px"
-    doc.style.height = "625px"
+    doc.style.width = "448px";
+    doc.style.height = "625px";
+    doc.style.display = "block";
+    classes1S.hidden = true;
+    classes2S.hidden = true;
+    classes3S.hidden = true;
 }
 
 function clickTranscript() {
-    doc.style.width = "448px"
-    doc.style.height = "571px"
-    doc.src = "Assets/TranscriptHS.pdf#toolbar=0";
-    hs_transcript_button.style.border = "2px solid white"
-    hs_diploma_button.style.border = "none"
-    ib_diploma_button.style.border = "none"
+
+    if (hsActive) {
+        doc.style.width = "448px";
+        doc.style.height = "571px";
+        doc.src = "Assets/TranscriptHS.pdf#toolbar=0";
+        hs_transcript_button.style.border = "2px solid white";
+        hs_diploma_button.style.border = "none";
+        ib_diploma_button.style.border = "none";
+    } else {
+        classes1S.hidden = false;
+        classes2S.hidden = true;
+        classes3S.hidden = true;
+    }
+    
 }
 
 function clickHSdiploma() {
-    doc.style.width = "715px"
-    doc.style.height = "512px"
-    doc.src = "Assets/DiplomaPrepa.pdf#toolbar=0";
-    hs_transcript_button.style.border = "none"
-    hs_diploma_button.style.border = "2px solid white"
-    ib_diploma_button.style.border = "none"
+    if (hsActive) {
+        doc.style.width = "715px";
+        doc.style.height = "512px";
+        doc.src = "Assets/DiplomaPrepa.pdf#toolbar=0";
+        hs_transcript_button.style.border = "none";
+        hs_diploma_button.style.border = "2px solid white";
+        ib_diploma_button.style.border = "none";
+    } else {
+        classes1S.hidden = true;
+        classes2S.hidden = false;
+        classes3S.hidden = true;
+    }
+    
+    
 }
 
 function clickIBdiploma() {
-    doc.style.width = "448px"
-    doc.style.height = "625px"
-    doc.src = "Assets/DiplomaIB.pdf#toolbar=0";
-    hs_transcript_button.style.border = "none"
-    hs_diploma_button.style.border = "none"
-    ib_diploma_button.style.border = "2px solid white"
+    if (hsActive) {
+        doc.style.width = "448px";
+        doc.style.height = "625px";
+        doc.src = "Assets/DiplomaIB.pdf#toolbar=0";
+        hs_transcript_button.style.border = "none";
+        hs_diploma_button.style.border = "none";
+        ib_diploma_button.style.border = "2px solid white";
+    } else {
+        classes1S.hidden = true;
+        classes2S.hidden = true;
+        classes3S.hidden = false;
+    }
+    
+    
 }
 
 function clickMathJump() {
     project_view.style.display= 'flex';
-    project_image.src = "Assets/MathJump.png"
+    project_image.src = "Assets/MathJump.png";
     project_text.innerHTML = mathJump_string;
 }
 function hoverMathJump() {
-    mathJumpCover.style.border = "5px solid white"
+    mathJumpCover.style.border = "5px solid white";
 }
 function notHoverMathJump() {
-    mathJumpCover.style.border = "none"
+    mathJumpCover.style.border = "none";
 }
 
 function clickTicTacToe() {
     project_view.style.display= 'flex';
-    project_image.src = "Assets/TicTacToe.png"
+    project_image.src = "Assets/TicTacToe.png";
     project_text.innerHTML = ticTacToe_string;
 
 }
 function hoverTicTacToe() {
-    ticTacToeCover.style.border = "5px solid white"
+    ticTacToeCover.style.border = "5px solid white";
 }
 function notHoverTicTacToe() {
-    ticTacToeCover.style.border = "none"
+    ticTacToeCover.style.border = "none";
 }
 
 function clickMemoryGame() {
     project_view.style.display= 'flex';
-    project_image.src = "Assets/MemoryGame.png"
+    project_image.src = "Assets/MemoryGame.png";
     project_text.innerHTML = memoryGame_stringf;
 }
 function hoverMemoryGame() {
-    memoryGameCover.style.border = "5px solid white"
+    memoryGameCover.style.border = "5px solid white";
 }
 function notHoverMemoryGame() {
-    memoryGameCover.style.border = "none"
+    memoryGameCover.style.border = "none";
 }
 
 function clickOMS() {
     project_view.style.display= 'flex';
-    project_image.src = "Assets/OMS.png"
+    project_image.src = "Assets/OMS.png";
     project_text.innerHTML = oms_string;
 }
 function hoverOMS() {
-    omsCover.style.border = "5px solid white"
+    omsCover.style.border = "5px solid white";
 }
 function notHoverOMS() {
-    omsCover.style.border = "none"
+    omsCover.style.border = "none";
 }
 
 function clickLotery() {
     project_view.style.display= 'flex';
-    project_image.src = "Assets/Lotery.png"
-    project_text.innerHTML = lotery_string;
+    project_image.src = "Assets/mrinvestor.png";
+    project_text.innerHTML = investor_string;
 }
 function hoverLotery() {
-    loteryCover.style.border = "5px solid white"
+    loteryCover.style.border = "5px solid white";
 }
 function notHoverLotery() {
-    loteryCover.style.border = "none"
+    loteryCover.style.border = "none";
 }
 
 function clickBack() {

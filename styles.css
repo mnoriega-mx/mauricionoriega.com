@@ -258,7 +258,6 @@ ABOUT ME
 .education-main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 80%;
     height: 90%;
@@ -312,6 +311,19 @@ ABOUT ME
     height: 571px;
     margin: 20px;
     border: 3px solid white;
+}
+
+.class-list{
+    color: white;
+    font-size: 25px;
+    padding: 25px;
+    background-color: rgba(68, 68, 68, 0.5);
+    border-radius: 25px;
+    margin-top: 50px;
+}
+
+.course {
+    margin: 10px;
 }
 
 
