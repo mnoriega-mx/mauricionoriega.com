@@ -45,7 +45,7 @@ let diploma_navbar = document.getElementById("diploma-navbar");
 let grad_date = document.getElementById("grad-date");
 
 let hs_string = "Graduated from Prepa Tec Santa Catarina from Honors program with final average of 90.5";
-let uni_string = "First year student at Tec de Monterrey. Currently studying B.S in Computer Science";
+let uni_string = "Second year student at Tec de Monterrey. Currently studying B.S in Computer Science";
 let cer_string = ""
 
 let classes1S = document.getElementById("1s-classes");
